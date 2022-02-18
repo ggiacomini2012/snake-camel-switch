@@ -8,8 +8,12 @@ In your terminal write: `npm install snake-camel-switch`
 
 ## Example
 
-    const snakeCamel = require("snake-camel-switch");
+    const change = require('snake-camel-switch')
 
-    const obt = { an_bn_cn: 0, an_an: 0 }
+    const object = { an_bn_cn: 0, an_an: 0 }
 
-    snakeCamel(obj); // { anBnCn: 0, anAn: 0 }
+    console.log(change.toCamel(object)); // { anBnCn: 0, anAn: 0 }
+
+    const object2 = { anBnCn: 0, anAn: 0 }
+
+    console.log(change.toSnake(object2)) // { an_bn_cn: 0, an_an: 0 }
